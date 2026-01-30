@@ -1,5 +1,6 @@
-with open('info.txt','w+') as f :
-    data=f.write("I am living in a chaotic country India")
-    f.seek(0)
-    data=f.read()
+with open('data.txt','w') as f :
+    f.write('python is a dynamic language')
+
+with open('data.txt','r') as f :
+    data = f.read()
     print(data)
