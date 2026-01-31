@@ -1,1 +1,3 @@
-python is a dynamic language
+I am preparing for interviews
+Python is my backend language
+I am learning fastapi for python
