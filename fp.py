@@ -1,12 +1,18 @@
-#1
-with open('info.txt','w+') as f :
-    f.write('Hello Python') 
-    print(f.tell())
-    print(f.seek(0))
-    print(f.read())
+import csv
 
-#2
-with open('info.txt','r') as f :
-    print(f.readline(4))
-    print(f.seek(0))
-    print(f.read())
+with open('students.csv','r') as f :
+    reader=csv.reader(f)
+    for row in reader:
+        print(row)
+
+with open('students.csv','r')as f:
+    reader=csv.reader(f)
+    next(reader) # skip header
+    for row in reader :
+        print(row)
+
+
+with open('students.csv','r') as f :
+    reader = csv.DictReader(f)
+    for row in reader:
+        print(row)
