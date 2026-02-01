@@ -1,18 +1,12 @@
 import csv
 
-with open('students.csv','r') as f :
-    reader=csv.reader(f)
-    for row in reader:
-        print(row)
+with open('employees.csv','w',newline='') as f :
+    writing=csv.writer(f)
 
-with open('students.csv','r')as f:
-    reader=csv.reader(f)
-    next(reader) # skip header
-    for row in reader :
-        print(row)
+    writing.writerow(['id','name','salary'])
+    writing.writerow([1,'Amit',50000])
+    writing.writerow([2,'Neha',60000])
+    writing.writerow([3,'srinivas',90000])
 
-
-with open('students.csv','r') as f :
-    reader = csv.DictReader(f)
-    for row in reader:
-        print(row)
+with open('employees.csv','r') as f :
+    print(f.read())
