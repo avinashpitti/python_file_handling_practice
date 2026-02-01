@@ -1,0 +1,10 @@
+{
+    "name": "Avinash",
+    "age": 22,
+    "skills": [
+        "python",
+        "fastapi",
+        "mysql"
+    ],
+    "is_active": true
+}

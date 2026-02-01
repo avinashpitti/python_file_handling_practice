@@ -30,5 +30,7 @@ with open('students.csv','r') as f :
     for row in reader:
         if int(row['age'])>21:
             print(row['name'],row['age'])
+
+
     
     
