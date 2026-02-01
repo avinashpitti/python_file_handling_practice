@@ -1,3 +1,4 @@
+from _csv import reader
 import csv
 from _csv import writer
 import csv
@@ -16,4 +17,18 @@ with open('students.csv','w',newline='') as f :
 
 with open('students.csv','r') as f :
     print(f.read())
+
+with open('students.csv','a',newline='') as f :
+    writer=csv.writer(f)
+    writer.writerow([4,'Meena',20])
+
+with open('students.csv','r') as f :
+    print(f.read())
+
+with open('students.csv','r') as f :
+    reader=csv.DictReader(f)
+    for row in reader:
+        if int(row['age'])>21:
+            print(row['name'],row['age'])
+    
     
