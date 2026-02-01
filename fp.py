@@ -1,12 +1,19 @@
 import csv
+from _csv import writer
+import csv
 
-with open('employees.csv','w',newline='') as f :
-    writing=csv.writer(f)
+data=[
+    {'id':1,'name':'Rahul','age':22},
+    {'id':2,'name':'Asha','age':24},
+    {'id':3,'name':'Mahesh','age':23}
+]
 
-    writing.writerow(['id','name','salary'])
-    writing.writerow([1,'Amit',50000])
-    writing.writerow([2,'Neha',60000])
-    writing.writerow([3,'srinivas',90000])
+with open('students.csv','w',newline='') as f :
+    fieldnames=['id','name','age']
+    writer=csv.DictWriter(f,fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(data)
 
-with open('employees.csv','r') as f :
+with open('students.csv','r') as f :
     print(f.read())
+    
