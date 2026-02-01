@@ -5,3 +5,7 @@ with open('users.json','r') as f:
 
 print(data)
 print(type(data))
+
+print(data["name"])
+print(data['age'])
+print(data['skills'][2])
